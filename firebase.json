@@ -1,0 +1,17 @@
+{
+  "hosting": {
+    "site":"eskuvo-dd3f6",
+    "public": "dist/eskuvo_helszin",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}

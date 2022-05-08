@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'eskuvo_helszin';
+  page = 'main';
+
+  changePage(selectedPage: string) {
+    this.page = selectedPage;
+  }
 }

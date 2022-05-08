@@ -1,0 +1,36 @@
+<div class="container mt-3">
+    <div class="d-flex justify-content between flex-wrap flex-md-nowarp align-items-center pt-2 pb-2 mb-3 border-bottom">
+        <h1>Helyszínek listája:</h1>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Neve:</th>
+                    <th scope="col">Leírás</th>
+                    <th scope="col">Befogadó mennyiség</th>
+                    <th scope="col">Cím</th>
+                    <th scope="col">Fénykép</th>
+                    <th class="text-center" scope="col">Módosítás</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let location of Locations; let i = index">
+                    <th scope="row">{{location._id}}</th>
+                    <td>{{location.name}}</td>
+                    <td>{{location.description}}</td>
+                    <td>{{location.max_members}}</td>
+                    <td>{{location.address}}</td>
+                    <td>{{location.photo_url}}</td>
+                    <td class="text-center">
+                        <button class="btn btn-sm btn-primary" routerLink="/edit-location/{{location._id}}">
+                            Szerkesztés</button>
+                        <button class="btn btn-sm btn-danger" (click)="delete(location._id, i)">Törlés</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,32 @@
+<div class="container mt-3">
+    <h1>Helyszín létrehozás</h1>
+    <div class="row justify-content center mt-3">
+        <div class="col-m-12">
+            <form [formGroup] = "locationForm" (ngSubmit)="onSubmit()">
+                <div class="form-group">
+                    <label for="name">Neve:</label>
+                    <input type="text" class="form-control" formControlName="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="description">Leírás:</label>
+                    <input type="text" class="form-control" formControlName="description" required>
+                </div>
+                <div class="form-group">
+                    <label for="max_members">Max létszám:</label>
+                    <input type="text" class="form-control" formControlName="max_members" required>
+                </div>
+                <div class="form-group">
+                    <label for="address">Cím:</label>
+                    <input type="text" class="form-control" formControlName="address" required>
+                </div>
+                <div class="form-group">
+                    <label for="photo_url">Fénykép:</label>
+                    <input type="text" class="form-control" formControlName="photo_url" required>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-primary btn-block" type="submit">Hozzáadás</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
